@@ -1,6 +1,6 @@
 # Nginx
 
-This service runs on CCAO's Shiny server/Ubuntu VM and is responsible directing traffic from the Data Science subdomain ([datascience.cookcountyassessor.com](datascience.cookcountyassessor.com)) to various Data Science Department applications and services. It utilizes a containerized version of [Nginx](https://hub.docker.com/_/nginx) ((pronounced "engine-x") to direct traffic.
+This service runs on CCAO's Shiny server/Ubuntu VM and is responsible directing traffic from the [Data Science subdomain](datascience.cookcountyassessor.com) to various Data Science Department applications and services. It utilizes a containerized version of [Nginx](https://hub.docker.com/_/nginx) (pronounced "engine-x") to direct traffic.
 
 
 ## Usage
@@ -9,7 +9,7 @@ To start this service, first connect to the Shiny server [via SSH](https://suppo
 
 This service is configured using the [`nginx.conf`](nginx.conf) file. See [this guide](https://nginx.org/en/docs/beginners_guide.html#proxy) for general Nginx configuration and the [ShinyProxy docs](https://www.shinyproxy.io/security/) for Nginx configuration specific to ShinyProxy.
 
-Nginx requires SSL or TLS certificates in order to serve websites via HTTPS. These certificates must exist in a subfolder named `secrets` and must have a specific names (see below). To generate certificates (self-sign) see [here](https://stackoverflow.com/questions/10175812/how-to-create-a-self-signed-certificate-with-openssl). The final directory structure should be:
+Nginx requires SSL or TLS certificates in order to serve websites via HTTPS. These certificates must exist in a subfolder named `secrets` and must have a specific names (see below). To generate (self-sign) certificates see [here](https://stackoverflow.com/questions/10175812/how-to-create-a-self-signed-certificate-with-openssl). The final directory structure should be:
 
 ```
 service_nginx
